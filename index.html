@@ -7,5 +7,23 @@
     <script src="./index.js" defer></script>
     <title>Unit Converter</title>
   </head>
-  <body></body>
+  <body>
+    <div class="container">
+      <div class="text-btn-section">
+        <input type="number" id="input-el" placeholder="Enter a number..." />
+        <div class="btn-section">
+          <button id="convert-btn">CONVERT</button>
+          <button id="reset-btn">RESET</button>
+        </div>
+      </div>
+      <div class="conversion-section">
+        <p class="convert-title">Length</p>
+        <p id="metre-foot-p">Metre = Foot | Foot = Metre</p>
+        <p class="convert-title">Volume</p>
+        <p id="liter-gallon-p">Liter = Gallon | Gallon = Foot</p>
+        <p class="convert-title">Mass</p>
+        <p id="kilo-pound-p">Kilo = Pound | Pound = Kilo</p>
+      </div>
+    </div>
+  </body>
 </html>
