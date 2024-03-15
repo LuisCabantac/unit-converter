@@ -63,3 +63,38 @@ button:hover {
 button:active {
   background-color: #004080;
 }
+
+.convert-title {
+  font-size: 22px;
+}
+
+.conversion-section {
+  width: 50rem;
+}
+
+.convert-title {
+  font-weight: 600;
+}
+
+.length {
+  background-color: #f9f9f9;
+  margin-bottom: 8px;
+  padding: 10px 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #f5f5f5;
+}
+
+.volume {
+  background-color: #e8f6f6;
+  margin-bottom: 8px;
+  padding: 10px 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #e6f3f3;
+}
+
+.mass {
+  background-color: #f4f0f0;
+  padding: 10px 10px 12px;
+  border-radius: 8px;
+  border: 1px solid #f3efef;
+}
