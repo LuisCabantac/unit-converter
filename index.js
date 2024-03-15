@@ -5,6 +5,22 @@ const metreFoot = document.querySelector("#metre-foot-p");
 const literGallon = document.querySelector("#liter-gallon-p");
 const kiloPound = document.querySelector("#kilo-pound-p");
 
+convertBtn.addEventListener("click", function () {
+  if (inputEl.value === "");
+  else {
+    metreAndFoot();
+    literAndGallon();
+    kiloAndPound();
+  }
+});
+
+resetBtn.addEventListener("click", function () {
+  inputEl.value = "";
+  metreFoot.textContent = "Metre = Foot | Foot = Metre";
+  literGallon.textContent = "Liter = Gallon | Gallon = Foot";
+  kiloPound.textContent = "Kilo = Pound | Pound = Kilo";
+});
+
 function metreAndFoot() {
   const metFoot = Number(inputEl.value) * 3.28084;
   const fooMetre = Number(inputEl.value) * 0.3048;
