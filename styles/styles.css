@@ -3,7 +3,7 @@
 body {
   font-family: "Outfit", sans-serif;
   text-align: center;
-  font-size: 18px;
+  font-size: 1.1rem;
   color: #333333;
   margin: 5vw 4vw 3vw;
 }
@@ -59,6 +59,7 @@ button {
   color: #ffffff;
   padding: 5px 10px;
   margin: 8px 5px 0 0;
+  cursor: pointer;
 }
 
 button:hover {
@@ -70,7 +71,7 @@ button:active {
 }
 
 .convert-title {
-  font-size: 22px;
+  font-size: 1.4rem;
 }
 
 .conversion-section {
@@ -102,4 +103,32 @@ button:active {
   padding: 10px 10px 12px;
   border-radius: 8px;
   border: 1px solid #f3efef;
+}
+
+@media only screen and (max-width: 900px) {
+  body {
+    font-size: 0.8rem;
+  }
+
+  .container {
+    display: block;
+    margin-top: 3rem;
+  }
+
+  h1 {
+    display: inline-block;
+  }
+
+  input {
+    display: block;
+  }
+
+  .conversion-section {
+    width: 100%;
+    margin-top: 1rem;
+  }
+
+  .convert-title {
+    font-size: 1rem;
+  }
 }
