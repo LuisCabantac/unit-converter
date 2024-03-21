@@ -6,4 +6,4 @@ A JavaScript metric converter for the following conversion(More will be availabl
 - Liter-Gallon/Gallon-Liter
 - Kilo-Pound/Pound-Kilo
 
-You can check it out here: https://warm-tanuki-2b9b83.netlify.app/
+https://luiscabantac.github.io/unit-converter/
