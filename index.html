@@ -14,25 +14,123 @@
         <a href="https://github.com/LuisCabantac/unit-converter" target="_blank"
           ><h1>Unit Converter</h1></a
         >
-        <input type="number" id="input-el" placeholder="Enter a number..." />
-        <div class="btn-section">
-          <button id="convert-btn">CONVERT</button>
-          <button id="reset-btn">RESET</button>
-        </div>
       </div>
       <div class="conversion-section">
-        <div class="length">
-          <p class="convert-title">Length</p>
-          <p id="metre-foot-p">Metre = Foot | Foot = Metre</p>
+        <label for="select-unit">SELECT UNIT</label>
+        <select name="SELECT UNIT" id="select-unit">
+          <option value="length">Length</option>
+          <option value="volume">Volume</option>
+          <option value="mass">Mass</option>
+        </select>
+        <div class="length-unit">
+          <select name="length" id="length-choiceOne">
+            <option value="kilometre">Kilometre</option>
+            <option value="metre">Metre</option>
+            <option value="centimetre">Centimetre</option>
+            <option value="millimetre">Millimetre</option>
+            <option value="micrometre">Micrometre</option>
+            <option value="nanometre">Nanometre</option>
+            <option value="mile">Mile</option>
+            <option value="yard">Yard</option>
+            <option value="foot">Foot</option>
+            <option value="inch">Inch</option>
+            <option value="nautical mile">Nautical Mile</option>
+          </select>
         </div>
-        <div class="volume">
-          <p class="convert-title">Volume</p>
-          <p id="liter-gallon-p">Liter = Gallon | Gallon = Foot</p>
-        </div>
-        <div class="mass">
-          <p class="convert-title">Mass</p>
-          <p id="kilo-pound-p">Kilo = Pound | Pound = Kilo</p>
-        </div>
+          <div class="volume-unit">
+            <select name="volume" id="volumeChoiceOne">
+              <option value="us-gallon">US Liquid Gallon</option>
+              <option value="us-quart">US Liquid Quart</option>
+              <option value="us-pint">US Liquid Pint</option>
+              <option value="us-cup">US Legal Cup</option>
+              <option value="us-fluid-ounce">US Fluid Ounce</option>
+              <option value="us-tablespoon">US Tablespoon</option>
+              <option value="us-teaspoon">US Teaspoon</option>
+              <option value="cubic-meter">Cubic Meter</option>
+              <option value="liter">Liter</option>
+              <option value="milliliter">Milliliter</option>
+              <option value="imperial-gallon">Imperial Gallon</option>
+              <option value="imperial-quart">Imperial Quart</option>
+              <option value="imperial-pint">Imperial Pint</option>
+              <option value="imperial-cup">Imperial Cup</option>
+              <option value="imperial-fluid-ounce">Imperial Fluid Ounce</option>
+              <option value="imperial-tablespoon">Imperial Tablespoon</option>
+              <option value="imperial-teaspoon">Imperial Teaspoon</option>
+              <option value="cubic-foot">Cubic Foot</option>
+              <option value="cubic-inch">Cubic Inch</option>
+            </select>
+          </div>
+          <div class="mass-unit">
+            <select name="mass" id="mass-choiceOne">
+              <option value="tonne">Tonne</option>
+              <option value="kilogram">Kilogram</option>
+              <option value="gram">Gram</option>
+              <option value="milligram">Milligram</option>
+              <!-- <option value="microgram">Microgram</option> -->
+              <option value="imperial-ton">Imperial Ton</option>
+              <option value="us-ton">US ton</option>
+              <option value="stone">Stone</option>
+              <option value="pound">Pound</option>
+              <option value="ounce">Ounce</option>
+            </select>
+          </div>
+        <input type="number" id="input-el" placeholder="Convert a value..." />
+        <button id="convert-btn">CONVERT</button>
+        <div class="length-unit">
+          <select name="length" id="length-choiceTwo">
+            <option value="kilometre">Kilometre</option>
+            <option value="metre">Metre</option>
+            <option value="centimetre">Centimetre</option>
+            <option value="millimetre">Millimetre</option>
+            <option value="micrometre">Micrometre</option>
+            <option value="nanometre">Nanometre</option>
+            <option value="mile">Mile</option>
+            <option value="yard">Yard</option>
+            <option value="foot">Foot</option>
+            <option value="inch">Inch</option>
+            <option value="nautical-mile">Nautical Mile</option>
+          </select>
+          </div>
+          <div class="volume-unit">
+            <select name="volume" id="volume-choiceTwo">
+              <option value="us-gallon">US Liquid Gallon</option>
+              <option value="us-quart">US Liquid Quart</option>
+              <option value="us-pint">US Liquid Pint</option>
+              <option value="us-cup">US Legal Cup</option>
+              <option value="us-fluid-ounce">US Fluid Ounce</option>
+              <option value="us-tablespoon">US Tablespoon</option>
+              <option value="us-teaspoon">US Teaspoon</option>
+              <option value="cubic-meter">Cubic Meter</option>
+              <option value="liter">Liter</option>
+              <option value="milliliter">Milliliter</option>
+              <option value="imperial-gallon">Imperial Gallon</option>
+              <option value="imperial-quart">Imperial Quart</option>
+              <option value="imperial-pint">Imperial Pint</option>
+              <option value="imperial-cup">Imperial Cup</option>
+              <option value="imperial-fluid-ounce">Imperial Fluid Ounce</option>
+              <option value="imperial-tablespoon">Imperial Tablespoon</option>
+              <option value="imperial-teaspoon">Imperial Teaspoon</option>
+              <option value="cubic-foot">Cubic Foot</option>
+              <option value="cubic-inch">Cubic Inch</option>
+            </select>
+          </div>
+          <div class="mass-unit">
+            <select name="mass" id="mass-choiceTwo">
+              <option value="tonne">Tonne</option>
+              <option value="kilogram">Kilogram</option>
+              <option value="gram">Gram</option>
+              <option value="milligram">Milligram</option>
+              <!-- <option value="microgram">Microgram</option> -->
+              <option value="imperial-ton">Imperial Ton</option>
+              <option value="us-ton">US ton</option>
+              <option value="stone">Stone</option>
+              <option value="pound">Pound</option>
+              <option value="ounce">Ounce</option>
+            </select>
+          </div>
+        <input type="number" class="input-el" id="result" placeholder="Converted value..." />
+        <button id="reset-btn">RESET</button>
+      </div>
       </div>
     </div>
   </body>
