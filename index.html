@@ -23,6 +23,7 @@
           <option value="mass">Mass</option>
         </select>
         <div class="length-unit">
+          <label for="length-choiceOne">FROM</label>
           <select name="length" id="length-choiceOne">
             <option value="kilometre">Kilometre</option>
             <option value="metre">Metre</option>
@@ -34,11 +35,11 @@
             <option value="yard">Yard</option>
             <option value="foot">Foot</option>
             <option value="inch">Inch</option>
-            <option value="nautical mile">Nautical Mile</option>
           </select>
         </div>
           <div class="volume-unit">
-            <select name="volume" id="volumeChoiceOne">
+            <label for="volume-choiceOne">FROM</label>
+            <select name="volume" id="volume-choiceOne">
               <option value="us-gallon">US Liquid Gallon</option>
               <option value="us-quart">US Liquid Quart</option>
               <option value="us-pint">US Liquid Pint</option>
@@ -61,6 +62,7 @@
             </select>
           </div>
           <div class="mass-unit">
+            <label for="mass-choiceOne">FROM</label>
             <select name="mass" id="mass-choiceOne">
               <option value="tonne">Tonne</option>
               <option value="kilogram">Kilogram</option>
@@ -75,8 +77,9 @@
             </select>
           </div>
         <input type="number" id="input-el" placeholder="Convert a value..." />
-        <button id="convert-btn">CONVERT</button>
+        
         <div class="length-unit">
+          <label for="length-choiceTwo">TO</label>
           <select name="length" id="length-choiceTwo">
             <option value="kilometre">Kilometre</option>
             <option value="metre">Metre</option>
@@ -88,10 +91,10 @@
             <option value="yard">Yard</option>
             <option value="foot">Foot</option>
             <option value="inch">Inch</option>
-            <option value="nautical-mile">Nautical Mile</option>
           </select>
           </div>
           <div class="volume-unit">
+            <label for="volume-choiceTwo">TO</label>
             <select name="volume" id="volume-choiceTwo">
               <option value="us-gallon">US Liquid Gallon</option>
               <option value="us-quart">US Liquid Quart</option>
@@ -115,6 +118,7 @@
             </select>
           </div>
           <div class="mass-unit">
+            <label for="mass-choiceTwo">TO</label>
             <select name="mass" id="mass-choiceTwo">
               <option value="tonne">Tonne</option>
               <option value="kilogram">Kilogram</option>
@@ -129,7 +133,10 @@
             </select>
           </div>
         <input type="number" class="input-el" id="result" placeholder="Converted value..." />
-        <button id="reset-btn">RESET</button>
+        <div class="btn-container">
+          <button id="convert-btn">CONVERT</button>
+          <button id="reset-btn">RESET</button>
+        </div>
       </div>
       </div>
     </div>
