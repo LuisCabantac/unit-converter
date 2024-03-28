@@ -1,9 +1,10 @@
 # Unit Converter
 
-A JavaScript metric converter for the following conversion(More will be available soon):
+A JavaScript unit converter.
 
-- Metre-Foot/Foot-Metre
-- Liter-Gallon/Gallon-Liter
-- Kilo-Pound/Pound-Kilo
+- Length Conversion
+- Volume Conversion
+- Mass Conversion
+- Temperature Conversion
 
 https://luiscabantac.github.io/unit-converter/
