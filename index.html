@@ -19,6 +19,7 @@
           <option value="length">Length</option>
           <option value="volume">Volume</option>
           <option value="mass">Mass</option>
+          <option value="temp">Temperature</option>
         </select>
         <div class="length-unit">
           <label for="length-choiceOne">FROM</label>
@@ -42,6 +43,15 @@
               <option value="us-quart">US Liquid Quart</option>
               <option value="us-pint">US Liquid Pint</option>
               <option value="us-cup">US Legal Cup</option>
+            </select>
+          </div>
+          <div class="temperature-unit">
+            <label for="temp-choiceOne">FROM</label>
+            <select name="temp" id="temp-choiceOne">
+              <option value="celsius">Celsius</option>
+              <option value="fahrenheit">Fahrenheit</option>
+              <option value="kelvin">Kelvin</option>
+              <option value="rankine">Rankine</option>
             </select>
           </div>
           <div class="mass-unit">
@@ -96,6 +106,15 @@
               <option value="pound">Pound</option>
               <option value="stone">Stone</option>
               <option value="us-ton">US Ton</option>
+            </select>
+          </div>
+          <div class="temperature-unit">
+            <label for="temp-choiceTwo">TO</label>
+            <select name="temp" id="temp-choiceTwo">
+              <option value="celsius">Celsius</option>
+              <option value="fahrenheit">Fahrenheit</option>
+              <option value="kelvin">Kelvin</option>
+              <option value="rankine">Rankine</option>
             </select>
           </div>
         <input type="number" class="input-el" id="result" placeholder="Converted value..." />

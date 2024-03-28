@@ -8,8 +8,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin: 0;
-  height: 100vh;
+  margin: 8em 0 0;
+  overflow: hidden;
 }
 
 .container {
@@ -108,20 +108,23 @@ select {
 
 #length-choiceOne,
 #mass-choiceOne,
-#volume-choiceOne {
+#volume-choiceOne,
+#temp-choiceOne {
   background-color: #e8f6f6;
   width: 21.2ch;
 }
 
 #length-choiceTwo,
 #mass-choiceTwo,
-#volume-choiceTwo {
+#volume-choiceTwo,
+#temp-choiceTwo {
   background-color: #f4f0f0;
   width: 23.3ch;
 }
 
 .mass-unit,
-.volume-unit {
+.volume-unit,
+.temperature-unit {
   display: none;
 }
 
@@ -133,10 +136,9 @@ footer {
   text-align: center;
 }
 
-@media only screen and (max-width: 800px) {
+@media (max-width: 800px) {
   body {
     font-size: 1em;
-    margin: 0;
   }
 
   .container {

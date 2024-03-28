@@ -19,6 +19,10 @@ document
       element.style.display = "none";
     });
 
+    document.querySelectorAll(".temperature-unit").forEach((element) => {
+      element.style.display = "none";
+    });
+
     if (unitSelect === "length") {
       document.querySelectorAll(".length-unit").forEach((element) => {
         element.style.display = "block";
@@ -31,6 +35,11 @@ document
       });
     } else if (unitSelect === "volume") {
       document.querySelectorAll(".volume-unit").forEach((element) => {
+        element.style.display = "block";
+        result.value = "";
+      });
+    } else if (unitSelect === "temp") {
+      document.querySelectorAll(".temperature-unit").forEach((element) => {
         element.style.display = "block";
         result.value = "";
       });
@@ -61,13 +70,21 @@ document.querySelector("#mass-choiceTwo").addEventListener("change", () => {
   getSelectedUnit();
 });
 
+document.querySelector("#temp-choiceOne").addEventListener("change", () => {
+  getSelectedUnit();
+});
+
+document.querySelector("#temp-choiceTwo").addEventListener("change", () => {
+  getSelectedUnit();
+});
+
 convertBtn.addEventListener("click", () => {
   getSelectedUnit();
 });
 
 function getSelectedUnit() {
   const selectUnit = document.querySelector("#select-unit").value;
-  const inputEl = document.querySelector("#input-el").value;
+  const inputEl = Number(document.querySelector("#input-el").value);
 
   if (inputEl !== "") {
     if (selectUnit === "length") {
@@ -82,6 +99,10 @@ function getSelectedUnit() {
       const massOne = document.querySelector("#mass-choiceOne").value;
       const massTwo = document.querySelector("#mass-choiceTwo").value;
       checkMassChoiceTwo(inputEl, massOne, massTwo);
+    } else if (selectUnit === "temp") {
+      const tempOne = document.querySelector("#temp-choiceOne").value;
+      const tempTwo = document.querySelector("#temp-choiceTwo").value;
+      checkTempChoiceTwo(inputEl, tempOne, tempTwo);
     }
   }
 }
@@ -171,6 +192,23 @@ function checkMassChoiceTwo(inputValue, choiceOne, choiceTwo) {
       break;
     case "us-ton":
       usTonCalc(inputValue, choiceTwo);
+      break;
+  }
+}
+
+function checkTempChoiceTwo(inputValue, choiceOne, choiceTwo) {
+  switch (choiceOne) {
+    case "celsius":
+      celsiusCalc(inputValue, choiceTwo);
+      break;
+    case "fahrenheit":
+      fahrenheitCalc(inputValue, choiceTwo);
+      break;
+    case "kelvin":
+      kelvinCalc(inputValue, choiceTwo);
+      break;
+    case "rankine":
+      rankineCalc(inputValue, choiceTwo);
       break;
   }
 }
@@ -527,4 +565,44 @@ function usTonCalc(value, type) {
   else ton = "Invalid";
 
   result.value = ton;
+}
+
+function celsiusCalc(value, type) {
+  let c = 0;
+  if (type === "celsius") c = value;
+  else if (type === "fahrenheit") c = (value * 9) / 5 + 32;
+  else if (type === "kelvin") c = value + 273.15;
+  else if (type === "rankine") c = ((value + 273.15) * 9) / 5;
+  else c = "Invalid";
+  result.value = c;
+}
+
+function fahrenheitCalc(value, type) {
+  let f = 0;
+  if (type === "celsius") f = ((value - 32) * 5) / 9;
+  else if (type === "fahrenheit") f = value;
+  else if (type === "kelvin") f = ((value + 459.67) * 5) / 9;
+  else if (type === "rankine") f = value + 459.67;
+  else f = "Invalid";
+  result.value = f;
+}
+
+function kelvinCalc(value, type) {
+  let k = 0;
+  if (type === "celsius") k = value - 273.15;
+  else if (type === "fahrenheit") k = (value * 9) / 5 - 459.67;
+  else if (type === "kelvin") k = value;
+  else if (type === "rankine") k = (value * 9) / 5;
+  else k = "Invalid";
+  result.value = k;
+}
+
+function rankineCalc(value, type) {
+  let r = 0;
+  if (type === "celsius") r = (value * 5) / 9 - 273.15;
+  else if (type === "fahrenheit") r = value - 459.67;
+  else if (type === "kelvin") r = (value * 5) / 9;
+  else if (type === "rankine") r = value;
+  else r = "Invalid";
+  result.value = r;
 }
