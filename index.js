@@ -161,6 +161,21 @@ function checkVolumeChoiceTwo(inputValue, choiceOne, choiceTwo) {
     case "us-cup":
       usCupCalc(inputValue, choiceTwo);
       break;
+    case "us-ounce":
+      usOunceCalc(inputValue, choiceTwo);
+      break;
+    case "us-tablespoon":
+      usTablespoonCalc(inputValue, choiceTwo);
+      break;
+    case "us-teaspoon":
+      usTeaspoonCalc(inputValue, choiceTwo);
+      break;
+    case "liter":
+      literCalc(inputValue, choiceTwo);
+      break;
+    case "milliliter":
+      milliliterCalc(inputValue, choiceTwo);
+      break;
   }
 }
 
@@ -389,6 +404,11 @@ function usGallonCalc(value, type) {
   else if (type === "us-quart") usg = value * 4;
   else if (type === "us-pint") usg = value * 8;
   else if (type === "us-cup") usg = value * 15.773;
+  else if (type === "us-ounce") usg = value * 128;
+  else if (type === "us-tablespoon") usg = value * 256;
+  else if (type === "us-teaspoon") usg = value * 768;
+  else if (type === "liter") usg = value * 3.785;
+  else if (type === "milliliter") usg = value * 3785;
   else usg = "Invalid";
   result.value = usg;
 }
@@ -399,6 +419,11 @@ function usQuartCalc(value, type) {
   else if (type === "us-quart") usq = value;
   else if (type === "us-pint") usq = value * 2;
   else if (type === "us-cup") usq = value * 3.942;
+  else if (type === "us-ounce") usq = value * 32;
+  else if (type === "us-tablespoon") usq = value * 64;
+  else if (type === "us-teaspoon") usq = value * 192;
+  else if (type === "liter") usq = value / 1.057;
+  else if (type === "milliliter") usq = value * 946.353;
   else usq = "Invalid";
   result.value = usq;
 }
@@ -409,6 +434,11 @@ function usPintCalc(value, type) {
   else if (type === "us-quart") usp = value / 2;
   else if (type === "us-pint") usp = value;
   else if (type === "us-cup") usp = value * 1.972;
+  else if (type === "us-ounce") usp = value * 16;
+  else if (type === "us-tablespoon") usp = value * 32;
+  else if (type === "us-teaspoon") usp = value * 96;
+  else if (type === "liter") usp = value * 0.473176;
+  else if (type === "milliliter") usp = value * 473.176;
   else usp = "Invalid";
   result.value = usp;
 }
@@ -419,8 +449,88 @@ function usCupCalc(value, type) {
   else if (type === "us-quart") usc = value / 3.943;
   else if (type === "us-pint") usc = value / 1.972;
   else if (type === "us-cup") usc = value;
+  else if (type === "us-ounce") usc = value * 8.11537;
+  else if (type === "us-tablespoon") usc = value * 16.2307;
+  else if (type === "us-teaspoon") usc = value * 48.6922;
+  else if (type === "liter") usc = value * 0.24;
+  else if (type === "milliliter") usc = value * 240;
   else usc = "Invalid";
   result.value = usc;
+}
+
+function usOunceCalc(value, type) {
+  let uso = 0;
+  if (type === "us-gallon") uso = value * 0.0078125;
+  else if (type === "us-quart") uso = value * 0.03125;
+  else if (type === "us-pint") uso = value * 0.0625;
+  else if (type === "us-cup") uso = value * 0.123223;
+  else if (type === "us-ounce") uso = value;
+  else if (type === "us-tablespoon") uso = value * 2;
+  else if (type === "us-teaspoon") uso = value * 6;
+  else if (type === "liter") uso = value * 0.0295735;
+  else if (type === "milliliter") uso = value * 29.5735;
+  else uso = "Invalid";
+  result.value = uso;
+}
+
+function usTablespoonCalc(value, type) {
+  let ustb = 0;
+  if (type === "us-gallon") ustb = value * 0.00390625;
+  else if (type === "us-quart") ustb = value * 0.015625;
+  else if (type === "us-pint") ustb = value * 0.03125;
+  else if (type === "us-cup") ustb = value * 0.0616115;
+  else if (type === "us-ounce") ustb = value * 0.5;
+  else if (type === "us-tablespoon") ustb = value;
+  else if (type === "us-teaspoon") ustb = value * 3;
+  else if (type === "liter") ustb = value / 67.628;
+  else if (type === "milliliter") ustb = value * 14.7868;
+  else ustb = "Invalid";
+  result.value = ustb;
+}
+
+function usTeaspoonCalc(value, type) {
+  let usts = 0;
+  if (type === "us-gallon") usts = value / 768;
+  else if (type === "us-quart") usts = value / 192;
+  else if (type === "us-pint") usts = value / 96;
+  else if (type === "us-cup") usts = value / 48.692;
+  else if (type === "us-ounce") usts = value / 6;
+  else if (type === "us-tablespoon") usts = value / 3;
+  else if (type === "us-teaspoon") usts = value;
+  else if (type === "liter") usts = value / 202.9;
+  else if (type === "milliliter") usts = value * 4.92892;
+  else usts = "Invalid";
+  result.value = usts;
+}
+
+function literCalc(value, type) {
+  let l = 0;
+  if (type === "us-gallon") l = value / 3.785;
+  else if (type === "us-quart") l = value * 1.057;
+  else if (type === "us-pint") l = value * 2.113;
+  else if (type === "us-cup") l = value * 4.167;
+  else if (type === "us-ounce") l = value * 33.814;
+  else if (type === "us-tablespoon") l = value * 67.628;
+  else if (type === "us-teaspoon") l = value * 202.9;
+  else if (type === "liter") l = value;
+  else if (type === "milliliter") l = value * 1000;
+  else l = "Invalid";
+  result.value = l;
+}
+
+function milliliterCalc(value, type) {
+  let ml = 0;
+  if (type === "us-gallon") ml = value / 3785;
+  else if (type === "us-quart") ml = value / 946.4;
+  else if (type === "us-pint") ml = value / 473.2;
+  else if (type === "us-cup") ml = value / 240;
+  else if (type === "us-ounce") ml = value / 29.574;
+  else if (type === "us-tablespoon") ml = value / 14.787;
+  else if (type === "us-teaspoon") ml = value / 4.929;
+  else if (type === "liter") ml = value / 1000;
+  else if (type === "milliliter") ml = value;
+  else ml = "Invalid";
+  result.value = ml;
 }
 
 function microgramCalc(value, type) {
