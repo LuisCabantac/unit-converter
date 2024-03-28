@@ -30,6 +30,7 @@ a {
 
 h1 {
   margin: 0 0 3.8em 0;
+  cursor: pointer;
 }
 
 .text-btn-section {
@@ -122,6 +123,14 @@ select {
 .mass-unit,
 .volume-unit {
   display: none;
+}
+
+footer {
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
 }
 
 @media only screen and (max-width: 800px) {
