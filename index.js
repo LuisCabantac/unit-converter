@@ -126,6 +126,55 @@ function checkLengthChoiceTwo(inputValue, choiceOne, choiceTwo) {
   }
 }
 
+function checkVolumeChoiceTwo(inputValue, choiceOne, choiceTwo) {
+  switch (choiceOne) {
+    case "us-gallon":
+      usGallonCalc(inputValue, choiceTwo);
+      break;
+    case "us-quart":
+      usQuartCalc(inputValue, choiceTwo);
+      break;
+    case "us-pint":
+      usPintCalc(inputValue, choiceTwo);
+      break;
+    case "us-cup":
+      usCupCalc(inputValue, choiceTwo);
+      break;
+  }
+}
+
+function checkMassChoiceTwo(inputValue, choiceOne, choiceTwo) {
+  switch (choiceOne) {
+    case "microgram":
+      microgramCalc(inputValue, choiceTwo);
+      break;
+    case "milligram":
+      milligramCalc(inputValue, choiceTwo);
+      break;
+    case "gram":
+      gramCalc(inputValue, choiceTwo);
+      break;
+    case "kilogram":
+      kilogramCalc(inputValue, choiceTwo);
+      break;
+    case "metric-ton":
+      metricTonCalc(inputValue, choiceTwo);
+      break;
+    case "ounce":
+      ounceCalc(inputValue, choiceTwo);
+      break;
+    case "pound":
+      poundCalc(inputValue, choiceTwo);
+      break;
+    case "stone":
+      stoneCalc(inputValue, choiceTwo);
+      break;
+    case "us-ton":
+      usTonCalc(inputValue, choiceTwo);
+      break;
+  }
+}
+
 function kilometreCalc(value, type) {
   let km = 0;
   if (type === "kilometre") km = value;
@@ -294,4 +343,188 @@ function inchCalc(value, type) {
   else ft = "Invalid";
 
   result.value = ft;
+}
+
+function usGallonCalc(value, type) {
+  let usg = 0;
+  if (type === "us-gallon") usg = value;
+  else if (type === "us-quart") usg = value * 4;
+  else if (type === "us-pint") usg = value * 8;
+  else if (type === "us-cup") usg = value * 15.773;
+  else usg = "Invalid";
+  result.value = usg;
+}
+
+function usQuartCalc(value, type) {
+  let usq = 0;
+  if (type === "us-gallon") usq = value / 4;
+  else if (type === "us-quart") usq = value;
+  else if (type === "us-pint") usq = value * 2;
+  else if (type === "us-cup") usq = value * 3.942;
+  else usq = "Invalid";
+  result.value = usq;
+}
+
+function usPintCalc(value, type) {
+  let usp = 0;
+  if (type === "us-gallon") usp = value / 8;
+  else if (type === "us-quart") usp = value / 2;
+  else if (type === "us-pint") usp = value;
+  else if (type === "us-cup") usp = value * 1.972;
+  else usp = "Invalid";
+  result.value = usp;
+}
+
+function usCupCalc(value, type) {
+  let usc = 0;
+  if (type === "us-gallon") usc = value / 15.772;
+  else if (type === "us-quart") usc = value / 3.943;
+  else if (type === "us-pint") usc = value / 1.972;
+  else if (type === "us-cup") usc = value;
+  else usc = "Invalid";
+  result.value = usc;
+}
+
+function microgramCalc(value, type) {
+  let tnne = 0;
+  if (type === "microgram") tnne = value;
+  else if (type === "milligram") tnne = value / 1000;
+  else if (type === "gram") tnne = value / 1e6;
+  else if (type === "kilogram") tnne = value / 1e9;
+  else if (type === "metric-ton") tnne = value / 1e12;
+  else if (type === "ounce") tnne = value / 2.835e7;
+  else if (type === "pound") tnne = value / 4.536e8;
+  else if (type === "stone") tnne = value / 6.35e9;
+  else if (type === "us-ton") tnne = value / 9.072e11;
+  else tnne = "Invalid";
+
+  result.value = tnne;
+}
+
+function milligramCalc(value, type) {
+  let mlg = 0;
+  if (type === "microgram") mlg = value * 1000;
+  else if (type === "milligram") mlg = value;
+  else if (type === "gram") mlg = value / 1000;
+  else if (type === "kilogram") mlg = value / 1e6;
+  else if (type === "metric-ton") mlg = value / 1e9;
+  else if (type === "ounce") mlg = value / 28350;
+  else if (type === "pound") mlg = value / 453600;
+  else if (type === "stone") mlg = value / 6.35e6;
+  else if (type === "us-ton") mlg = value / 9.072e8;
+  else mlg = "Invalid";
+
+  result.value = mlg;
+}
+
+function gramCalc(value, type) {
+  let g = 0;
+  if (type === "microgram") g = value * 1e6;
+  else if (type === "milligram") g = value * 1000;
+  else if (type === "gram") g = value;
+  else if (type === "kilogram") g = value / 1000;
+  else if (type === "metric-ton") g = value / 1e6;
+  else if (type === "ounce") g = value / 28.35;
+  else if (type === "pound") g = value / 453.6;
+  else if (type === "stone") g = value / 6350;
+  else if (type === "us-ton") g = value / 907200;
+  else g = "Invalid";
+
+  result.value = g;
+}
+
+function kilogramCalc(value, type) {
+  let kg = 0;
+  if (type === "microgram") kg = value * 1e9;
+  else if (type === "milligram") kg = value * 1e6;
+  else if (type === "gram") kg = value * 1000;
+  else if (type === "kilogram") kg = value;
+  else if (type === "metric-ton") kg = value / 1000;
+  else if (type === "ounce") kg = value * 35.274;
+  else if (type === "pound") kg = value * 2.205;
+  else if (type === "stone") kg = value / 6.35;
+  else if (type === "us-ton") kg = value / 907.2;
+  else kg = "Invalid";
+
+  result.value = kg;
+}
+
+function metricTonCalc(value, type) {
+  let mt = 0;
+  if (type === "microgram") mt = value * 1e12;
+  else if (type === "milligram") mt = value * 1e9;
+  else if (type === "gram") mt = value * 1e6;
+  else if (type === "kilogram") mt = value * 1000;
+  else if (type === "metric-ton") mt = value;
+  else if (type === "ounce") mt = value * 35270;
+  else if (type === "pound") mt = value * 2205;
+  else if (type === "stone") mt = value * 157.5;
+  else if (type === "us-ton") mt = value * 1.102;
+  else mt = "Invalid";
+
+  result.value = mt;
+}
+
+function ounceCalc(value, type) {
+  let oz = 0;
+  if (type === "microgram") oz = value * 2.835e7;
+  else if (type === "milligram") oz = value * 28350;
+  else if (type === "gram") oz = value * 28.35;
+  else if (type === "kilogram") oz = value / 35.274;
+  else if (type === "metric-ton") oz = value / 35270;
+  else if (type === "ounce") oz = value;
+  else if (type === "pound") oz = value / 16;
+  else if (type === "stone") oz = value / 224;
+  else if (type === "us-ton") oz = value / 32000;
+  else oz = "Invalid";
+
+  result.value = oz;
+}
+
+function poundCalc(value, type) {
+  let lb = 0;
+  if (type === "microgram") lb = value * 4.536e8;
+  else if (type === "milligram") lb = value * 453600;
+  else if (type === "gram") lb = value * 453.6;
+  else if (type === "kilogram") lb = value / 2.205;
+  else if (type === "metric-ton") lb = value / 2205;
+  else if (type === "ounce") lb = value * 16;
+  else if (type === "pound") lb = value;
+  else if (type === "stone") lb = value / 14;
+  else if (type === "us-ton") lb = value / 2000;
+  else lb = "Invalid";
+
+  result.value = lb;
+}
+
+function stoneCalc(value, type) {
+  let st = 0;
+  if (type === "microgram") st = value * 6.35e9;
+  else if (type === "milligram") st = value * 6.35e6;
+  else if (type === "gram") st = value * 6350;
+  else if (type === "kilogram") st = value * 6.35;
+  else if (type === "metric-ton") st = value / 157.5;
+  else if (type === "ounce") st = value * 224;
+  else if (type === "pound") st = value * 14;
+  else if (type === "stone") st = value;
+  else if (type === "us-ton") st = value / 142.9;
+  else st = "Invalid";
+
+  result.value = st;
+}
+
+function usTonCalc(value, type) {
+  let ton = 0;
+  if (type === "microgram") ton = value * 9.072e11;
+  else if (type === "milligram") ton = value * 9.072e8;
+  else if (type === "gram") ton = value * 907200;
+  else if (type === "kilogram") ton = value * 907.2;
+  else if (type === "metric-ton") ton = value / 1.102;
+  else if (type === "ounce") ton = value * 32000;
+  else if (type === "pound") ton = value * 2000;
+  else if (type === "stone") ton = value * 142.9;
+  else if (type === "us-ton") ton = value;
+  else ton = "Invalid";
+
+  result.value = ton;
 }
