@@ -46,7 +46,7 @@ input {
   border-radius: 5px;
   padding: 0.5em;
   outline: none;
-  width: 26.4ch;
+  width: 24ch;
 }
 
 input::-webkit-outer-spin-button,
@@ -67,9 +67,9 @@ button {
   background-color: #007bff;
   color: #ffffff;
   padding: 0.4rem 0.8rem;
-  margin: 0.5em 0 0;
+  margin: 0.5em 0.5em 0 0;
   cursor: pointer;
-  width: 12ch;
+  width: 10ch;
 }
 
 button:hover {
@@ -86,6 +86,7 @@ button:active {
 
 .conversion-section {
   display: block;
+  /* width: 40ch; */
 }
 
 .convert-title {
@@ -110,7 +111,7 @@ select {
 #volume-choiceOne,
 #temp-choiceOne {
   background-color: #e8f6f6;
-  width: 22.6ch;
+  width: 21.2ch;
 }
 
 #length-choiceTwo,
@@ -118,18 +119,13 @@ select {
 #volume-choiceTwo,
 #temp-choiceTwo {
   background-color: #f4f0f0;
-  width: 25.4ch;
+  width: 23.3ch;
 }
 
 .mass-unit,
 .volume-unit,
 .temperature-unit {
   display: none;
-}
-
-.btn-container {
-  display: flex;
-  justify-content: space-between;
 }
 
 footer {
@@ -161,25 +157,23 @@ footer {
 
   #length-choiceOne,
   #mass-choiceOne,
-  #volume-choiceOne,
-  #temp-choiceOne {
-    width: 22.6ch;
+  #volume-choiceOne {
+    width: 16.9ch;
   }
 
   #length-choiceTwo,
   #mass-choiceTwo,
-  #volume-choiceTwo,
-  #temp-choiceTwo {
-    width: 25.4ch;
+  #volume-choiceTwo {
+    width: 19ch;
   }
 
   select {
-    width: 16.2ch;
+    width: 12ch;
   }
 
   input {
     display: block;
-    width: 26.2ch;
+    width: 19.5ch;
   }
 
   h1 {
@@ -189,9 +183,5 @@ footer {
 
   .conversion-section {
     margin-top: 0.5em;
-  }
-
-  .btn-container {
-    display: block;
   }
 }
