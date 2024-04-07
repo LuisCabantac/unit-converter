@@ -7,5 +7,3 @@ A JavaScript unit converter.
 - Mass Conversion
 - Temperature Conversion
 - Volume Conversion
-
-https://luiscabantac.github.io/unit-converter/
