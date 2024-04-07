@@ -2,86 +2,6 @@ const convertBtn = document.querySelector("#convert-btn");
 const resetBtn = document.querySelector("#reset-btn");
 const result = document.querySelector("#result");
 
-document
-  .querySelector("#select-unit")
-  .addEventListener("change", function (event) {
-    const unitSelect = event.target.value;
-
-    document.querySelectorAll(".length-unit").forEach((element) => {
-      element.style.display = "none";
-    });
-
-    document.querySelectorAll(".mass-unit").forEach((element) => {
-      element.style.display = "none";
-    });
-
-    document.querySelectorAll(".volume-unit").forEach((element) => {
-      element.style.display = "none";
-    });
-
-    document.querySelectorAll(".temperature-unit").forEach((element) => {
-      element.style.display = "none";
-    });
-
-    if (unitSelect === "length") {
-      document.querySelectorAll(".length-unit").forEach((element) => {
-        element.style.display = "block";
-        result.value = "";
-      });
-    } else if (unitSelect === "mass") {
-      document.querySelectorAll(".mass-unit").forEach((element) => {
-        element.style.display = "block";
-        result.value = "";
-      });
-    } else if (unitSelect === "volume") {
-      document.querySelectorAll(".volume-unit").forEach((element) => {
-        element.style.display = "block";
-        result.value = "";
-      });
-    } else if (unitSelect === "temp") {
-      document.querySelectorAll(".temperature-unit").forEach((element) => {
-        element.style.display = "block";
-        result.value = "";
-      });
-    }
-  });
-
-document.querySelector("#length-choiceOne").addEventListener("change", () => {
-  getSelectedUnit();
-});
-
-document.querySelector("#length-choiceTwo").addEventListener("change", () => {
-  getSelectedUnit();
-});
-
-document.querySelector("#volume-choiceOne").addEventListener("change", () => {
-  getSelectedUnit();
-});
-
-document.querySelector("#volume-choiceTwo").addEventListener("change", () => {
-  getSelectedUnit();
-});
-
-document.querySelector("#mass-choiceOne").addEventListener("change", () => {
-  getSelectedUnit();
-});
-
-document.querySelector("#mass-choiceTwo").addEventListener("change", () => {
-  getSelectedUnit();
-});
-
-document.querySelector("#temp-choiceOne").addEventListener("change", () => {
-  getSelectedUnit();
-});
-
-document.querySelector("#temp-choiceTwo").addEventListener("change", () => {
-  getSelectedUnit();
-});
-
-convertBtn.addEventListener("click", () => {
-  getSelectedUnit();
-});
-
 function getSelectedUnit() {
   const selectUnit = document.querySelector("#select-unit").value;
   const inputEl = Number(document.querySelector("#input-el").value);
@@ -103,14 +23,42 @@ function getSelectedUnit() {
       const tempOne = document.querySelector("#temp-choiceOne").value;
       const tempTwo = document.querySelector("#temp-choiceTwo").value;
       checkTempChoiceTwo(inputEl, tempOne, tempTwo);
+    } else if (selectUnit === "area") {
+      const areaOne = document.querySelector("#area-choiceOne").value;
+      const areaTwo = document.querySelector("#area-choiceTwo").value;
+      checkAreaChoiceTwo(inputEl, areaOne, areaTwo);
     }
   }
 }
 
-resetBtn.addEventListener("click", () => {
-  document.querySelector("#input-el").value = "";
-  result.value = "";
-});
+function checkAreaChoiceTwo(inputValue, choiceOne, choiceTwo) {
+  switch (choiceOne) {
+    case "s-km":
+      sqKilometreCalc(inputValue, choiceTwo);
+      break;
+    case "s-m":
+      sqMetreCalc(inputValue, choiceTwo);
+      break;
+    case "s-mi":
+      sqMileCalc(inputValue, choiceTwo);
+      break;
+    case "s-yard":
+      sqYardCalc(inputValue, choiceTwo);
+      break;
+    case "s-foot":
+      sqFootCalc(inputValue, choiceTwo);
+      break;
+    case "s-inch":
+      sqInchCalc(inputValue, choiceTwo);
+      break;
+    case "ha":
+      sqHectareCalc(inputValue, choiceTwo);
+      break;
+    case "acre":
+      sqAcreCalc(inputValue, choiceTwo);
+      break;
+  }
+}
 
 function checkLengthChoiceTwo(inputValue, choiceOne, choiceTwo) {
   switch (choiceOne) {
@@ -226,6 +174,118 @@ function checkTempChoiceTwo(inputValue, choiceOne, choiceTwo) {
       rankineCalc(inputValue, choiceTwo);
       break;
   }
+}
+
+function sqKilometreCalc(value, type) {
+  let skm = 0;
+  if (type === "s-km") skm = value;
+  else if (type === "s-m") skm = value * 1e6;
+  else if (type === "s-mi") skm = value / 2.59;
+  else if (type === "s-yard") skm = value * 1.196e6;
+  else if (type === "s-foot") skm = value * 1.076e7;
+  else if (type === "s-inch") skm = value * 1.55e9;
+  else if (type === "ha") skm = value * 100;
+  else if (type === "acre") skm = value * 247.1;
+  else skm = "Invalid";
+  result.value = skm;
+}
+
+function sqMetreCalc(value, type) {
+  let sm = 0;
+  if (type === "s-km") sm = value / 1e6;
+  else if (type === "s-m") sm = value;
+  else if (type === "s-mi") sm = value / 2.59e6;
+  else if (type === "s-yard") sm = value * 1.196;
+  else if (type === "s-foot") sm = value * 10.764;
+  else if (type === "s-inch") sm = value * 1550;
+  else if (type === "ha") sm = value / 10000;
+  else if (type === "acre") sm = value / 4047;
+  else sm = "Invalid";
+  result.value = sm;
+}
+
+function sqMileCalc(value, type) {
+  let smi = 0;
+  if (type === "s-km") smi = value * 2.59;
+  else if (type === "s-m") smi = value * 2.59e6;
+  else if (type === "s-mi") smi = value;
+  else if (type === "s-yard") smi = value * 3.098e6;
+  else if (type === "s-foot") smi = value * 2.788e7;
+  else if (type === "s-inch") smi = value * 4.014e9;
+  else if (type === "ha") smi = value * 259;
+  else if (type === "acre") smi = value * 640;
+  else smi = "Invalid";
+  result.value = smi;
+}
+
+function sqYardCalc(value, type) {
+  let sy = 0;
+  if (type === "s-km") sy = value / 1.196e6;
+  else if (type === "s-m") sy = value / 1.196;
+  else if (type === "s-mi") sy = value / 3.098e6;
+  else if (type === "s-yard") sy = value;
+  else if (type === "s-foot") sy = value * 9;
+  else if (type === "s-inch") sy = value * 1296;
+  else if (type === "ha") sy = value / 11960;
+  else if (type === "acre") sy = value / 4840;
+  else sy = "Invalid";
+  result.value = sy;
+}
+
+function sqFootCalc(value, type) {
+  let sf = 0;
+  if (type === "s-km") sf = value / 1.076e7;
+  else if (type === "s-m") sf = value / 10.764;
+  else if (type === "s-mi") sf = value / 2.788e7;
+  else if (type === "s-yard") sf = value / 9;
+  else if (type === "s-foot") sf = value;
+  else if (type === "s-inch") sf = value * 144;
+  else if (type === "ha") sf = value / 107600;
+  else if (type === "acre") sf = value / 43560;
+  else sf = "Invalid";
+  result.value = sf;
+}
+
+function sqInchCalc(value, type) {
+  let sin = 0;
+  if (type === "s-km") sin = value / 1.55e9;
+  else if (type === "s-m") sin = value / 1550;
+  else if (type === "s-mi") sin = value / 4.014e9;
+  else if (type === "s-yard") sin = value / 1296;
+  else if (type === "s-foot") sin = value / 144;
+  else if (type === "s-inch") sin = value;
+  else if (type === "ha") sin = value / 1.55e7;
+  else if (type === "acre") sin = value / 6.273e6;
+  else sin = "Invalid";
+  result.value = sin;
+}
+
+function sqHectareCalc(value, type) {
+  let shec = 0;
+  if (type === "s-km") shec = value / 100;
+  else if (type === "s-m") shec = value * 10000;
+  else if (type === "s-mi") shec = value / 259;
+  else if (type === "s-yard") shec = value * 11960;
+  else if (type === "s-foot") shec = value * 107600;
+  else if (type === "s-inch") shec = value * 1.55e7;
+  else if (type === "ha") shec = value;
+  else if (type === "acre") shec = value * 2.471;
+  else shec = "Invalid";
+  result.value = shec;
+}
+
+function sqAcreCalc(value, type) {
+  let sac = 0;
+  if (type === "s-km") sac = value / 247.1;
+  else if (type === "s-m") sac = value * 4047;
+  else if (type === "s-mi") sac = value / 640;
+  else if (type === "s-yard") sac = value * 4840;
+  else if (type === "s-foot") sac = value * 43560;
+  else if (type === "s-inch") sac = value * 6.273e6;
+  else if (type === "ha") sac = value / 2.471;
+  else if (type === "acre") sac = value;
+  else sac = "Invalid";
+  result.value = sac;
 }
 
 function kilometreCalc(value, type) {
@@ -716,3 +776,100 @@ function rankineCalc(value, type) {
   else r = "Invalid";
   result.value = r;
 }
+
+document
+  .querySelector("#select-unit")
+  .addEventListener("change", function (event) {
+    const unitSelect = event.target.value;
+
+    document.querySelectorAll(".length-unit").forEach((element) => {
+      element.style.display = "none";
+    });
+
+    document.querySelectorAll(".mass-unit").forEach((element) => {
+      element.style.display = "none";
+    });
+
+    document.querySelectorAll(".volume-unit").forEach((element) => {
+      element.style.display = "none";
+    });
+
+    document.querySelectorAll(".temperature-unit").forEach((element) => {
+      element.style.display = "none";
+    });
+
+    document.querySelectorAll(".area-unit").forEach((element) => {
+      element.style.display = "none";
+    });
+
+    if (unitSelect === "length") {
+      document.querySelectorAll(".length-unit").forEach((element) => {
+        element.style.display = "block";
+        result.value = "";
+      });
+    } else if (unitSelect === "mass") {
+      document.querySelectorAll(".mass-unit").forEach((element) => {
+        element.style.display = "block";
+        result.value = "";
+      });
+    } else if (unitSelect === "volume") {
+      document.querySelectorAll(".volume-unit").forEach((element) => {
+        element.style.display = "block";
+        result.value = "";
+      });
+    } else if (unitSelect === "temp") {
+      document.querySelectorAll(".temperature-unit").forEach((element) => {
+        element.style.display = "block";
+        result.value = "";
+      });
+    } else if (unitSelect === "area") {
+      document.querySelectorAll(".area-unit").forEach((element) => {
+        element.style.display = "block";
+        result.value = "";
+      });
+    }
+  });
+
+document.querySelector("#input-el").addEventListener("input", () => {
+  getSelectedUnit();
+});
+
+document.querySelector("#area-choiceOne").addEventListener("change", () => {
+  getSelectedUnit();
+});
+
+document.querySelector("#area-choiceTwo").addEventListener("change", () => {
+  getSelectedUnit();
+});
+
+document.querySelector("#length-choiceOne").addEventListener("change", () => {
+  getSelectedUnit();
+});
+
+document.querySelector("#length-choiceTwo").addEventListener("change", () => {
+  getSelectedUnit();
+});
+
+document.querySelector("#volume-choiceOne").addEventListener("change", () => {
+  getSelectedUnit();
+});
+
+document.querySelector("#volume-choiceTwo").addEventListener("change", () => {
+  getSelectedUnit();
+});
+
+document.querySelector("#mass-choiceOne").addEventListener("change", () => {
+  getSelectedUnit();
+});
+
+document.querySelector("#mass-choiceTwo").addEventListener("change", () => {
+  getSelectedUnit();
+});
+
+document.querySelector("#temp-choiceOne").addEventListener("change", () => {
+  getSelectedUnit();
+});
+
+document.querySelector("#temp-choiceTwo").addEventListener("change", () => {
+  getSelectedUnit();
+});

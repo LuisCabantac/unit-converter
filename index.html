@@ -16,11 +16,25 @@
       <div class="conversion-section">
         <label for="select-unit">SELECT UNIT</label>
         <select name="SELECT UNIT" id="select-unit">
+          <option value="area">Area</option>
           <option value="length">Length</option>
-          <option value="volume">Volume</option>
           <option value="mass">Mass</option>
           <option value="temp">Temperature</option>
+          <option value="volume">Volume</option>
         </select>
+        <div class="area-unit">
+          <label for="area-choiceOne">FROM</label>
+          <select name="area" id="area-choiceOne">
+            <option value="s-km">Square Kilometre</option>
+            <option value="s-m">Square Metre</option>
+            <option value="s-mi">Square Mile</option>
+            <option value="s-yard">Square Yard</option>
+            <option value="s-foot">Square Foot</option>
+            <option value="s-inch">Square Inch</option>
+            <option value="ha">Hectare</option>
+            <option value="acre">Acre</option>
+          </select>
+        </div>
         <div class="length-unit">
           <label for="length-choiceOne">FROM</label>
           <select name="length" id="length-choiceOne">
@@ -75,6 +89,19 @@
           </div>
         <input type="number" id="input-el" placeholder="Convert a value..." />
         
+        <div class="area-unit">
+          <label for="area-choiceTwo">TO</label>
+          <select name="area" id="area-choiceTwo">
+            <option value="s-km">Square Kilometre</option>
+            <option value="s-m">Square Metre</option>
+            <option value="s-mi">Square Mile</option>
+            <option value="s-yard">Square Yard</option>
+            <option value="s-foot">Square Foot</option>
+            <option value="s-inch">Square Inch</option>
+            <option value="ha">Hectare</option>
+            <option value="acre">Acre</option>
+          </select>
+        </div>
         <div class="length-unit">
           <label for="length-choiceTwo">TO</label>
           <select name="length" id="length-choiceTwo">
@@ -128,10 +155,10 @@
             </select>
           </div>
         <input type="number" class="input-el" id="result" placeholder="Converted value..." />
-        <div class="btn-container">
+        <!-- <div class="btn-container">
           <button id="convert-btn">CONVERT</button>
           <button id="reset-btn">RESET</button>
-        </div>
+        </div> -->
       </div>
       </div>
     </div>
