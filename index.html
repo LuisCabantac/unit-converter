@@ -3,65 +3,104 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="./assets/unit-icon.png" />
+    <link rel="icon" href="./assets/images/unit-converter_icon.png" />
     <link rel="stylesheet" href="./assets/styles.css" />
-    <script defer src="./assets/index.js"></script>
+    <script type="module" defer src="./assets/script.js"></script>
     <title>Unit Converter</title>
   </head>
   <body>
     <div class="container">
-      <div class="text-btn-section">
-        <h1>Unit Converter</h1>
+      <div class="logo-section">
+        <h1>
+          <span
+            ><img src="./assets/images/unit-converter_logo.png" alt="logo"
+          /></span>
+          <span class="logo-text">nit Converter</span>
+        </h1>
       </div>
       <div class="conversion-section">
-        <label for="select-unit">SELECT UNIT</label>
-        <select name="SELECT UNIT" id="select-unit">
-          <option value="area">Area</option>
-          <option value="length">Length</option>
-          <option value="mass">Mass</option>
-          <option value="temp">Temperature</option>
-          <option value="volume">Volume</option>
-        </select>
-        <div class="area-unit">
-          <label for="area-choiceOne">FROM</label>
-          <select name="area" id="area-choiceOne">
-            <option value="s-km">Square Kilometre</option>
-            <option value="s-m">Square Metre</option>
-            <option value="s-mi">Square Mile</option>
-            <option value="s-yard">Square Yard</option>
-            <option value="s-foot">Square Foot</option>
-            <option value="s-inch">Square Inch</option>
-            <option value="ha">Hectare</option>
-            <option value="acre">Acre</option>
-          </select>
-        </div>
-        <div class="length-unit">
-          <label for="length-choiceOne">FROM</label>
-          <select name="length" id="length-choiceOne">
-            <option value="kilometre">Kilometre</option>
-            <option value="metre">Metre</option>
-            <option value="centimetre">Centimetre</option>
-            <option value="millimetre">Millimetre</option>
-            <option value="micrometre">Micrometre</option>
-            <option value="nanometre">Nanometre</option>
-            <option value="mile">Mile</option>
-            <option value="yard">Yard</option>
-            <option value="foot">Foot</option>
-            <option value="inch">Inch</option>
-          </select>
-        </div>
-          <div class="volume-unit">
-            <label for="volume-choiceOne">FROM</label>
-            <select name="volume" id="volume-choiceOne">
-              <option value="us-gallon">US Liquid Gallon</option>
-              <option value="us-quart">US Liquid Quart</option>
-              <option value="us-pint">US Liquid Pint</option>
-              <option value="us-cup">US Legal Cup</option>
-              <option value="us-ounce">US Fluid Ounce</option>
-              <option value="us-tablespoon">US Tablespoon</option>
-              <option value="us-teaspoon">US Teaspoon</option>
-              <option value="liter">Liter</option>
-              <option value="milliliter">Milliliter</option>
+        <div class="conversion-container">
+          <div class="select-unit-section">
+            <label for="select-unit">SELECT UNIT</label>
+            <select name="SELECT UNIT" id="select-unit">
+              <option value="area">Area</option>
+              <option value="frequency">Frequency</option>
+              <option value="fuel">Fuel Economy</option>
+              <option value="length">Length</option>
+              <option value="mass">Mass</option>
+              <option value="pressure">Pressure</option>
+              <option value="temp">Temperature</option>
+              <option value="volume">Volume</option>
+            </select>
+          </div>
+          <div class="area-unit">
+            <label for="area-choiceOne">FROM</label>
+            <select name="area" id="area-choiceOne">
+              <option value="sqKilometre" selected>Square Kilometre</option>
+              <option value="sqMetre">Square Metre</option>
+              <option value="sqMile">Square Mile</option>
+              <option value="sqYard">Square Yard</option>
+              <option value="sqFoot">Square Foot</option>
+              <option value="sqInch">Square Inch</option>
+              <option value="hectare">Hectare</option>
+              <option value="acre">Acre</option>
+            </select>
+          </div>
+          <div class="frequency-unit">
+            <label for="frequency-choiceOne">FROM</label>
+            <select name="frequency" id="frequency-choiceOne">
+              <option value="hertz">Hertz</option>
+              <option value="kHertz">Kilohertz</option>
+              <option value="mHertz">Megahertz</option>
+              <option value="gHertz">Gigahertz</option>
+            </select>
+          </div>
+          <div class="fuel-unit">
+            <label for="fuel-choiceOne">FROM</label>
+            <select name="fuel" id="fuel-choiceOne">
+              <option value="mpUSGallon">Miles per US Gallon</option>
+              <option value="mpGallon">Miles per Gallon</option>
+              <option value="kmpLitre">Kilometre per Litre</option>
+              <option value="lp100Km">Liter per 100 Kilometre</option>
+            </select>
+          </div>
+          <div class="length-unit">
+            <label for="length-choiceOne">FROM</label>
+            <select name="length" id="length-choiceOne">
+              <option value="kilometre">Kilometre</option>
+              <option value="metre">Metre</option>
+              <option value="centimetre">Centimetre</option>
+              <option value="millimetre">Millimetre</option>
+              <option value="micrometre">Micrometre</option>
+              <option value="nanometre">Nanometre</option>
+              <option value="mile">Mile</option>
+              <option value="yard">Yard</option>
+              <option value="foot">Foot</option>
+              <option value="inch">Inch</option>
+            </select>
+          </div>
+          <div class="mass-unit">
+            <label for="mass-choiceOne">FROM</label>
+            <select name="mass" id="mass-choiceOne">
+              <option value="microgram">Microgram</option>
+              <option value="milligram">Milligram</option>
+              <option value="gram">Gram</option>
+              <option value="kilogram">Kilogram</option>
+              <option value="metricTon">Metric Ton</option>
+              <option value="ounce">Ounce</option>
+              <option value="pound">Pound</option>
+              <option value="stone">Stone</option>
+              <option value="usTon">US Ton</option>
+            </select>
+          </div>
+          <div class="pressure-unit">
+            <label for="pressure-choiceOne">FROM</label>
+            <select name="pressure" id="pressure-choiceOne">
+              <option value="bar">Bar</option>
+              <option value="pascal">Pascal</option>
+              <option value="pperSqInch">Pound per square inch</option>
+              <option value="sAtmosphere">Standard Atmosphere</option>
+              <option value="torr">Torr</option>
             </select>
           </div>
           <div class="temperature-unit">
@@ -73,62 +112,67 @@
               <option value="rankine">Rankine</option>
             </select>
           </div>
-          <div class="mass-unit">
-            <label for="mass-choiceOne">FROM</label>
-            <select name="mass" id="mass-choiceOne">
-              <option value="microgram">Microgram</option>
-              <option value="milligram">Milligram</option>
-              <option value="gram">Gram</option>
-              <option value="kilogram">Kilogram</option>
-              <option value="metric-ton">Metric Ton</option>
-              <option value="ounce">Ounce</option>
-              <option value="pound">Pound</option>
-              <option value="stone">Stone</option>
-              <option value="us-ton">US Ton</option>
-            </select>
-          </div>
-        <input type="number" id="input-el" placeholder="Convert a value..." />
-        
-        <div class="area-unit">
-          <label for="area-choiceTwo">TO</label>
-          <select name="area" id="area-choiceTwo">
-            <option value="s-km">Square Kilometre</option>
-            <option value="s-m">Square Metre</option>
-            <option value="s-mi">Square Mile</option>
-            <option value="s-yard">Square Yard</option>
-            <option value="s-foot">Square Foot</option>
-            <option value="s-inch">Square Inch</option>
-            <option value="ha">Hectare</option>
-            <option value="acre">Acre</option>
-          </select>
-        </div>
-        <div class="length-unit">
-          <label for="length-choiceTwo">TO</label>
-          <select name="length" id="length-choiceTwo">
-            <option value="kilometre">Kilometre</option>
-            <option value="metre">Metre</option>
-            <option value="centimetre">Centimetre</option>
-            <option value="millimetre">Millimetre</option>
-            <option value="micrometre">Micrometre</option>
-            <option value="nanometre">Nanometre</option>
-            <option value="mile">Mile</option>
-            <option value="yard">Yard</option>
-            <option value="foot">Foot</option>
-            <option value="inch">Inch</option>
-          </select>
-          </div>
           <div class="volume-unit">
-            <label for="volume-choiceTwo">TO</label>
-            <select name="volume" id="volume-choiceTwo">
-              <option value="us-gallon">US Liquid Gallon</option>
-              <option value="us-quart">US Liquid Quart</option>
-              <option value="us-pint">US Liquid Pint</option>
-              <option value="us-cup">US Legal Cup</option>
-              <option value="us-ounce">US Fluid Ounce</option>
-              <option value="us-tablespoon">US Tablespoon</option>
-              <option value="us-teaspoon">US Teaspoon</option>
+            <label for="volume-choiceOne">FROM</label>
+            <select name="volume" id="volume-choiceOne">
+              <option value="usGallon">US Liquid Gallon</option>
+              <option value="usQuart">US Liquid Quart</option>
+              <option value="usPint">US Liquid Pint</option>
+              <option value="usCup">US Legal Cup</option>
+              <option value="usOunce">US Fluid Ounce</option>
+              <option value="usTablespoon">US Tablespoon</option>
+              <option value="usTeaspoon">US Teaspoon</option>
               <option value="liter">Liter</option>
               <option value="milliliter">Milliliter</option>
+            </select>
+          </div>
+          <label for="input-el">VALUE</label>
+          <input type="number" id="input-el" placeholder="Convert a value..." />
+
+          <div class="area-unit">
+            <label for="area-choiceTwo">TO</label>
+            <select name="area" id="area-choiceTwo">
+              <option value="sqKilometre">Square Kilometre</option>
+              <option value="sqMetre" selected>Square Metre</option>
+              <option value="sqMile">Square Mile</option>
+              <option value="sqYard">Square Yard</option>
+              <option value="sqFoot">Square Foot</option>
+              <option value="sqInch">Square Inch</option>
+              <option value="hectare">Hectare</option>
+              <option value="acre">Acre</option>
+            </select>
+          </div>
+          <div class="frequency-unit">
+            <label for="frequency-choiceTwo">TO</label>
+            <select name="frequency" id="frequency-choiceTwo">
+              <option value="hertz">Hertz</option>
+              <option value="kHertz">Kilohertz</option>
+              <option value="mHertz">Megahertz</option>
+              <option value="gHertz">Gigahertz</option>
+            </select>
+          </div>
+          <div class="fuel-unit">
+            <label for="fuel-choiceTwo">TO</label>
+            <select name="fuel" id="fuel-choiceTwo">
+              <option value="mpUSGallon">Miles per US Gallon</option>
+              <option value="mpGallon">Miles per Gallon</option>
+              <option value="kmpLitre">Kilometre per Litre</option>
+              <option value="lp100Km">Liter per 100 Kilometre</option>
+            </select>
+          </div>
+          <div class="length-unit">
+            <label for="length-choiceTwo">TO</label>
+            <select name="length" id="length-choiceTwo">
+              <option value="kilometre">Kilometre</option>
+              <option value="metre">Metre</option>
+              <option value="centimetre">Centimetre</option>
+              <option value="millimetre">Millimetre</option>
+              <option value="micrometre">Micrometre</option>
+              <option value="nanometre">Nanometre</option>
+              <option value="mile">Mile</option>
+              <option value="yard">Yard</option>
+              <option value="foot">Foot</option>
+              <option value="inch">Inch</option>
             </select>
           </div>
           <div class="mass-unit">
@@ -138,11 +182,11 @@
               <option value="milligram">Milligram</option>
               <option value="gram">Gram</option>
               <option value="kilogram">Kilogram</option>
-              <option value="metric-ton">Metric Ton</option>
+              <option value="metricTon">Metric Ton</option>
               <option value="ounce">Ounce</option>
               <option value="pound">Pound</option>
               <option value="stone">Stone</option>
-              <option value="us-ton">US Ton</option>
+              <option value="usTon">US Ton</option>
             </select>
           </div>
           <div class="temperature-unit">
@@ -154,12 +198,48 @@
               <option value="rankine">Rankine</option>
             </select>
           </div>
-        <input type="number" class="input-el" id="result" placeholder="Converted value..." />
-      </div>
+          <div class="pressure-unit">
+            <label for="pressure-choiceTwo">TO</label>
+            <select name="pressure" id="pressure-choiceTwo">
+              <option value="bar">Bar</option>
+              <option value="pascal">Pascal</option>
+              <option value="pperSqInch">Pound per square inch</option>
+              <option value="sAtmosphere">Standard Atmosphere</option>
+              <option value="torr">Torr</option>
+            </select>
+          </div>
+          <div class="volume-unit">
+            <label for="volume-choiceTwo">TO</label>
+            <select name="volume" id="volume-choiceTwo">
+              <option value="usGallon">US Liquid Gallon</option>
+              <option value="usQuart">US Liquid Quart</option>
+              <option value="usPint">US Liquid Pint</option>
+              <option value="usCup">US Legal Cup</option>
+              <option value="usOunce">US Fluid Ounce</option>
+              <option value="usTablespoon">US Tablespoon</option>
+              <option value="usTeaspoon">US Teaspoon</option>
+              <option value="liter">Liter</option>
+              <option value="milliliter">Milliliter</option>
+            </select>
+          </div>
+          <label for="result"></label>
+          <input
+            type="number"
+            class="input-el"
+            id="result"
+            placeholder="Converted value..."
+          />
+        </div>
       </div>
     </div>
     <footer>
-      <p><a href="https://github.com/LuisCabantac/unit-converter/" target="_blank">&copy; 2024 Luis Cabantac</a></p>
+      <p>
+        <a
+          href="https://github.com/LuisCabantac/unit-converter/"
+          target="_blank"
+          >&copy; 2024 Luis Cabantac</a
+        >
+      </p>
     </footer>
   </body>
 </html>
