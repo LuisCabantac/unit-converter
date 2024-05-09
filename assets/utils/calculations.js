@@ -1294,6 +1294,96 @@ export const usTon = {
   },
 };
 
+export const miPerHour = {
+  miPerHour(value) {
+    return value;
+  },
+  ftPerSecond(value) {
+    return value * 1.467;
+  },
+  mPerSecond(value) {
+    return value / 2.237;
+  },
+  kmPerHour(value) {
+    return value * 1.609;
+  },
+  knot(value) {
+    return value / 1.151;
+  },
+};
+
+export const ftPerSecond = {
+  miPerHour(value) {
+    return value / 1.467;
+  },
+  ftPerSecond(value) {
+    return value;
+  },
+  mPerSecond(value) {
+    return value / 3.281;
+  },
+  kmPerHour(value) {
+    return value * 1.097;
+  },
+  knot(value) {
+    return value / 1.688;
+  },
+};
+
+export const mPerSecond = {
+  miPerHour(value) {
+    return value * 2.237;
+  },
+  ftPerSecond(value) {
+    return value * 3.281;
+  },
+  mPerSecond(value) {
+    return value;
+  },
+  kmPerHour(value) {
+    return value * 3.6;
+  },
+  knot(value) {
+    return value * 1.944;
+  },
+};
+
+export const kmPerHour = {
+  miPerHour(value) {
+    return value / 1.609;
+  },
+  ftPerSecond(value) {
+    return value / 1.097;
+  },
+  mPerSecond(value) {
+    return value / 3.6;
+  },
+  kmPerHour(value) {
+    return value;
+  },
+  knot(value) {
+    return value / 1.852;
+  },
+};
+
+export const knot = {
+  miPerHour(value) {
+    return value * 1.151;
+  },
+  ftPerSecond(value) {
+    return value * 1.688;
+  },
+  mPerSecond(value) {
+    return value / 1.944;
+  },
+  kmPerHour(value) {
+    return value * 1.852;
+  },
+  knot(value) {
+    return value;
+  },
+};
+
 export const celsius = {
   celsius(value) {
     return value;
@@ -1350,6 +1440,474 @@ export const rankine = {
     return (value * 5) / 9;
   },
   rankine(value) {
+    return value;
+  },
+};
+
+export const nSecond = {
+  nSecond(value) {
+    return value;
+  },
+  muSecond(value) {
+    return value / 1000;
+  },
+  mSecond(value) {
+    return value / 1e6;
+  },
+  second(value) {
+    return value / 1e9;
+  },
+  minute(value) {
+    return value / 6e10;
+  },
+  hour(value) {
+    return value / 3.6e12;
+  },
+  day(value) {
+    return value / 8.64e13;
+  },
+  week(value) {
+    return value / 6.048e14;
+  },
+  month(value) {
+    return value / 2.628e15;
+  },
+  calYear(value) {
+    return value / 3.154e16;
+  },
+  decade(value) {
+    return value / 3.154e17;
+  },
+  century(value) {
+    return value / 3.154e18;
+  },
+};
+
+export const muSecond = {
+  nSecond(value) {
+    return value * 1000;
+  },
+  muSecond(value) {
+    return value;
+  },
+  mSecond(value) {
+    return value / 1000;
+  },
+  second(value) {
+    return value / 1e6;
+  },
+  minute(value) {
+    return value / 6e7;
+  },
+  hour(value) {
+    return value / 3.6e9;
+  },
+  day(value) {
+    return value / 8.64e10;
+  },
+  week(value) {
+    return value / 6.048e11;
+  },
+  month(value) {
+    return value / 2.628e12;
+  },
+  calYear(value) {
+    return value / 3.154e13;
+  },
+  decade(value) {
+    return value / 3.154e14;
+  },
+  century(value) {
+    return value / 3.154e15;
+  },
+};
+
+export const mSecond = {
+  nSecond(value) {
+    return value * 1e6;
+  },
+  muSecond(value) {
+    return value * 1000;
+  },
+  mSecond(value) {
+    return value;
+  },
+  second(value) {
+    return value / 1000;
+  },
+  minute(value) {
+    return value / 60000;
+  },
+  hour(value) {
+    return value / 3.6e6;
+  },
+  day(value) {
+    return value / 8.64e7;
+  },
+  week(value) {
+    return value / 6.048e8;
+  },
+  month(value) {
+    return value / 2.628e9;
+  },
+  calYear(value) {
+    return value / 3.154e10;
+  },
+  decade(value) {
+    return value / 3.154e11;
+  },
+  century(value) {
+    return value / 3.154e12;
+  },
+};
+
+export const second = {
+  nSecond(value) {
+    return value * 1e9;
+  },
+  muSecond(value) {
+    return value * 1e6;
+  },
+  mSecond(value) {
+    return value * 1000;
+  },
+  second(value) {
+    return value;
+  },
+  minute(value) {
+    return value / 60;
+  },
+  hour(value) {
+    return value / 3600;
+  },
+  day(value) {
+    return value / 86400;
+  },
+  week(value) {
+    return value / 604800;
+  },
+  month(value) {
+    return value / 2.628e6;
+  },
+  calYear(value) {
+    return value / 3.154e7;
+  },
+  decade(value) {
+    return value / 3.154e8;
+  },
+  century(value) {
+    return value / 3.154e9;
+  },
+};
+
+export const minute = {
+  nSecond(value) {
+    return value * 6e10;
+  },
+  muSecond(value) {
+    return value * 6e7;
+  },
+  mSecond(value) {
+    return value * 60000;
+  },
+  second(value) {
+    return value * 60;
+  },
+  minute(value) {
+    return value;
+  },
+  hour(value) {
+    return value / 60;
+  },
+  day(value) {
+    return value / 1440;
+  },
+  week(value) {
+    return value / 10080;
+  },
+  month(value) {
+    return value / 43800;
+  },
+  calYear(value) {
+    return value / 525600;
+  },
+  decade(value) {
+    return value / 5.256e6;
+  },
+  century(value) {
+    return value / 5.256e7;
+  },
+};
+
+export const hour = {
+  nSecond(value) {
+    return value * 3.6e12;
+  },
+  muSecond(value) {
+    return value * 3.6e9;
+  },
+  mSecond(value) {
+    return value * 3.6e6;
+  },
+  second(value) {
+    return value * 3600;
+  },
+  minute(value) {
+    return value * 60;
+  },
+  hour(value) {
+    return value;
+  },
+  day(value) {
+    return value / 24;
+  },
+  week(value) {
+    return value / 168;
+  },
+  month(value) {
+    return value / 730;
+  },
+  calYear(value) {
+    return value / 8760;
+  },
+  decade(value) {
+    return value / 87600;
+  },
+  century(value) {
+    return value / 876000;
+  },
+};
+
+export const day = {
+  nSecond(value) {
+    return value * 8.64e13;
+  },
+  muSecond(value) {
+    return value * 8.64e10;
+  },
+  mSecond(value) {
+    return value * 8.64e7;
+  },
+  second(value) {
+    return value * 86400;
+  },
+  minute(value) {
+    return value * 1440;
+  },
+  hour(value) {
+    return value * 24;
+  },
+  day(value) {
+    return value;
+  },
+  week(value) {
+    return value / 7;
+  },
+  month(value) {
+    return value / 30.417;
+  },
+  calYear(value) {
+    return value / 365;
+  },
+  decade(value) {
+    return value / 3650;
+  },
+  century(value) {
+    return value / 36500;
+  },
+};
+
+export const week = {
+  nSecond(value) {
+    return value * 6.048e14;
+  },
+  muSecond(value) {
+    return value * 6.048e11;
+  },
+  mSecond(value) {
+    return value * 6.048e8;
+  },
+  second(value) {
+    return value * 604800;
+  },
+  minute(value) {
+    return value * 10080;
+  },
+  hour(value) {
+    return value * 168;
+  },
+  day(value) {
+    return value * 7;
+  },
+  week(value) {
+    return value;
+  },
+  month(value) {
+    return value / 4.345;
+  },
+  calYear(value) {
+    return value / 52.143;
+  },
+  decade(value) {
+    return value / 521.4;
+  },
+  century(value) {
+    return value / 5214;
+  },
+};
+
+export const month = {
+  nSecond(value) {
+    return value * 2.628e15;
+  },
+  muSecond(value) {
+    return value * 2.628e12;
+  },
+  mSecond(value) {
+    return value * 2.628e9;
+  },
+  second(value) {
+    return value * 2.628e6;
+  },
+  minute(value) {
+    return value * 43800;
+  },
+  hour(value) {
+    return value * 730;
+  },
+  day(value) {
+    return value * 30.417;
+  },
+  week(value) {
+    return value * 4.345;
+  },
+  month(value) {
+    return value;
+  },
+  calYear(value) {
+    return value / 12;
+  },
+  decade(value) {
+    return value / 120;
+  },
+  century(value) {
+    return value / 1200;
+  },
+};
+
+export const calYear = {
+  nSecond(value) {
+    return value * 3.154e16;
+  },
+  muSecond(value) {
+    return value * 3.154e13;
+  },
+  mSecond(value) {
+    return value * 3.154e10;
+  },
+  second(value) {
+    return value * 3.154e7;
+  },
+  minute(value) {
+    return value * 525600;
+  },
+  hour(value) {
+    return value * 8760;
+  },
+  day(value) {
+    return value * 365;
+  },
+  week(value) {
+    return value * 52.143;
+  },
+  month(value) {
+    return value * 12;
+  },
+  calYear(value) {
+    return value;
+  },
+  decade(value) {
+    return value / 10;
+  },
+  century(value) {
+    return value / 100;
+  },
+};
+
+export const decade = {
+  nSecond(value) {
+    return value * 3.154e17;
+  },
+  muSecond(value) {
+    return value * 3.154e14;
+  },
+  mSecond(value) {
+    return value * 3.154e11;
+  },
+  second(value) {
+    return value * 3.154e8;
+  },
+  minute(value) {
+    return value * 5.256e6;
+  },
+  hour(value) {
+    return value * 87600;
+  },
+  day(value) {
+    return value * 3650;
+  },
+  week(value) {
+    return value * 521.4;
+  },
+  month(value) {
+    return value * 120;
+  },
+  calYear(value) {
+    return value * 10;
+  },
+  decade(value) {
+    return value;
+  },
+  century(value) {
+    return value / 10;
+  },
+};
+
+export const century = {
+  nSecond(value) {
+    return value * 3.154e18;
+  },
+  muSecond(value) {
+    return value * 3.154e15;
+  },
+  mSecond(value) {
+    return value * 3.154e12;
+  },
+  second(value) {
+    return value * 3.154e9;
+  },
+  minute(value) {
+    return value * 5.256e7;
+  },
+  hour(value) {
+    return value * 876000;
+  },
+  day(value) {
+    return value * 36500;
+  },
+  week(value) {
+    return value * 5214;
+  },
+  month(value) {
+    return value * 1200;
+  },
+  calYear(value) {
+    return value * 100;
+  },
+  decade(value) {
+    return value * 10;
+  },
+  century(value) {
     return value;
   },
 };

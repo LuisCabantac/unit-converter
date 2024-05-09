@@ -1,7 +1,7 @@
 {
   "name": "unit-converter",
-  "version": "1.5.0",
-  "description": "Convert values between different units of length, area, volume, mass, and temperature on the fly.",
+  "version": "1.6.0",
+  "description": "Convert different units on the fly.",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"

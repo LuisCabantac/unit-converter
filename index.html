@@ -4,24 +4,32 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" href="./assets/images/unit-converter_icon.png" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
     <link rel="stylesheet" href="./assets/styles.css" />
     <script type="module" defer src="./assets/script.js"></script>
     <title>Unit Converter</title>
   </head>
   <body>
+    <button class="theme-mode-btn">
+      <span class="material-symbols-outlined"> dark_mode </span>
+    </button>
     <div class="container">
       <div class="logo-section">
         <h1>
-          <span
-            ><img src="./assets/images/unit-converter_logo.png" alt="logo"
-          /></span>
-          <span class="logo-text">nit Converter</span>
+          <span class="logo-text"
+            >Unit Converter <span class="dot-logo">o</span></span
+          >
         </h1>
       </div>
       <div class="conversion-section">
         <div class="conversion-container">
           <div class="select-unit-section">
-            <label for="select-unit">SELECT UNIT</label>
+            <label class="select-unit-label" for="select-unit"
+              >SELECT UNIT</label
+            >
             <select name="SELECT UNIT" id="select-unit">
               <option value="area">Area</option>
               <option value="frequency">Frequency</option>
@@ -29,7 +37,9 @@
               <option value="length">Length</option>
               <option value="mass">Mass</option>
               <option value="pressure">Pressure</option>
+              <option value="speed">Speed</option>
               <option value="temp">Temperature</option>
+              <option value="time">Time</option>
               <option value="volume">Volume</option>
             </select>
           </div>
@@ -103,6 +113,16 @@
               <option value="torr">Torr</option>
             </select>
           </div>
+          <div class="speed-unit">
+            <label for="speed-choiceOne">FROM</label>
+            <select name="speed" id="speed-choiceOne">
+              <option value="miPerHour">Miles per hour</option>
+              <option value="ftPerSecond">Foot per second</option>
+              <option value="mPerSecond">Metre per second</option>
+              <option value="kmPerHour">Kilometre per hour</option>
+              <option value="knot">Knot</option>
+            </select>
+          </div>
           <div class="temperature-unit">
             <label for="temp-choiceOne">FROM</label>
             <select name="temp" id="temp-choiceOne">
@@ -110,6 +130,23 @@
               <option value="fahrenheit">Fahrenheit</option>
               <option value="kelvin">Kelvin</option>
               <option value="rankine">Rankine</option>
+            </select>
+          </div>
+          <div class="time-unit">
+            <label for="time-choiceOne">FROM</label>
+            <select name="time" id="time-choiceOne">
+              <option value="nSecond">Nanosecond</option>
+              <option value="muSecond">Microsecond</option>
+              <option value="mSecond">Millisecond</option>
+              <option value="second">Second</option>
+              <option value="minute">Minute</option>
+              <option value="hour">Hour</option>
+              <option value="day">Day</option>
+              <option value="week">Week</option>
+              <option value="month">Month</option>
+              <option value="calYear">Calendar Year</option>
+              <option value="decade">Decade</option>
+              <option value="century">Century</option>
             </select>
           </div>
           <div class="volume-unit">
@@ -189,6 +226,26 @@
               <option value="usTon">US Ton</option>
             </select>
           </div>
+          <div class="pressure-unit">
+            <label for="pressure-choiceTwo">TO</label>
+            <select name="pressure" id="pressure-choiceTwo">
+              <option value="bar">Bar</option>
+              <option value="pascal">Pascal</option>
+              <option value="pperSqInch">Pound per square inch</option>
+              <option value="sAtmosphere">Standard Atmosphere</option>
+              <option value="torr">Torr</option>
+            </select>
+          </div>
+          <div class="speed-unit">
+            <label for="speed-choiceTwo">TO</label>
+            <select name="speed" id="speed-choiceTwo">
+              <option value="miPerHour">Miles per hour</option>
+              <option value="ftPerSecond">Foot per second</option>
+              <option value="mPerSecond">Metre per second</option>
+              <option value="kmPerHour">Kilometre per hour</option>
+              <option value="knot">Knot</option>
+            </select>
+          </div>
           <div class="temperature-unit">
             <label for="temp-choiceTwo">TO</label>
             <select name="temp" id="temp-choiceTwo">
@@ -198,14 +255,21 @@
               <option value="rankine">Rankine</option>
             </select>
           </div>
-          <div class="pressure-unit">
-            <label for="pressure-choiceTwo">TO</label>
-            <select name="pressure" id="pressure-choiceTwo">
-              <option value="bar">Bar</option>
-              <option value="pascal">Pascal</option>
-              <option value="pperSqInch">Pound per square inch</option>
-              <option value="sAtmosphere">Standard Atmosphere</option>
-              <option value="torr">Torr</option>
+          <div class="time-unit">
+            <label for="time-choiceTwo">TO</label>
+            <select name="time" id="time-choiceTwo">
+              <option value="nSecond">Nanosecond</option>
+              <option value="muSecond">Microsecond</option>
+              <option value="mSecond">Millisecond</option>
+              <option value="second">Second</option>
+              <option value="minute">Minute</option>
+              <option value="hour">Hour</option>
+              <option value="day">Day</option>
+              <option value="week">Week</option>
+              <option value="month">Month</option>
+              <option value="calYear">Calendar Year</option>
+              <option value="decade">Decade</option>
+              <option value="century">Century</option>
             </select>
           </div>
           <div class="volume-unit">
@@ -225,7 +289,7 @@
           <label for="result"></label>
           <input
             type="number"
-            class="input-el"
+            class="output-el"
             id="result"
             placeholder="Converted value..."
           />

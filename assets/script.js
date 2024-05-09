@@ -1,5 +1,9 @@
 import * as Calculations from "./utils/calculations.js";
 
+const toggleButton = document.querySelector(".theme-mode-btn");
+const bodyElement = document.querySelector("body");
+const isDarkMode = localStorage.getItem("darkMode") === "true";
+
 const renderResult = function (result) {
   document.querySelector("#result").value = result;
 };
@@ -28,6 +32,10 @@ document
 
     displayUnits(".pressure-unit", "none");
 
+    displayUnits(".speed-unit", "none");
+
+    displayUnits(".time-unit", "none");
+
     displayUnits(".temperature-unit", "none");
 
     displayUnits(".volume-unit", "none");
@@ -50,8 +58,14 @@ document
     if (unitSelect === "pressure") {
       displayUnits(".pressure-unit", "block");
     }
+    if (unitSelect === "speed") {
+      displayUnits(".speed-unit", "block");
+    }
     if (unitSelect === "temp") {
       displayUnits(".temperature-unit", "block");
+    }
+    if (unitSelect === "time") {
+      displayUnits(".time-unit", "block");
     }
     if (unitSelect === "volume") {
       displayUnits(".volume-unit", "block");
@@ -103,8 +117,14 @@ const getSelectedUnit = function () {
     if (selectUnit === "pressure")
       getUnit(inputEl, "#pressure-choiceOne", "#pressure-choiceTwo");
 
+    if (selectUnit === "speed")
+      getUnit(inputEl, "#speed-choiceOne", "#speed-choiceTwo");
+
     if (selectUnit === "temp")
       getUnit(inputEl, "#temp-choiceOne", "#temp-choiceTwo");
+
+    if (selectUnit === "time")
+      getUnit(inputEl, "#time-choiceOne", "#time-choiceTwo");
 
     if (selectUnit === "volume")
       getUnit(inputEl, "#volume-choiceOne", "#volume-choiceTwo");
@@ -116,3 +136,33 @@ document.querySelector("#input-el").addEventListener("input", getSelectedUnit);
 document
   .querySelectorAll("select")
   .forEach((element) => element.addEventListener("change", getSelectedUnit));
+
+const toggleDarkMode = function () {
+  bodyElement.classList.toggle("body-dk-mode");
+  document.querySelector(".container").classList.toggle("container-dk-mode");
+  const selectLabel = document.querySelector(".select-unit-label");
+  selectLabel.classList.toggle("select-unit-label-dk-mode");
+  document
+    .querySelector(".conversion-section")
+    .classList.toggle("conversion-section-dk-mode");
+  document.querySelector(".output-el").classList.toggle("result-dk-mode");
+  document
+    .querySelectorAll("select")
+    .forEach((el) => el.classList.toggle("select-dk-mode"));
+  document.querySelector("#input-el").classList.toggle("input-dk-mode");
+};
+
+if (isDarkMode) {
+  toggleDarkMode();
+  toggleButton.classList.add("theme-mode-btn-dk-mode");
+}
+
+toggleButton.addEventListener("click", function () {
+  toggleDarkMode();
+  this.classList.toggle("theme-mode-btn-dk-mode");
+
+  localStorage.setItem(
+    "darkMode",
+    bodyElement.classList.contains("body-dk-mode")
+  );
+});

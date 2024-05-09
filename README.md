@@ -1,6 +1,6 @@
 # Unit Converter
 
-Convert values between different units of length, area, volume, mass, and temperature on the fly.
+Convert different units on the fly.
 
 ## Features
 
@@ -12,9 +12,11 @@ Convert values between different units of length, area, volume, mass, and temper
   - Length: Kilometre, Metre, Centimetre, Millimetre, Micrometre, Nanometre, Mile, Yard, Foot, Inch
   - Mass: Microgram, Milligram, Gram, Kilogram, Metric Ton, Ounce, Pound, Stone, US Ton
   - Pressure: Bar, Pascal, Pound per square inch, Standard Atmosphere, Torr
+  - Speed: Miles per hour, Foot per second, Metre per second, Kilometre per hour, Knot
   - Temperature: Celsius, Fahrenheit, Kelvin, Rankine
+  - Time: Nanosecond, Microsecond, Millisecond, Second, Minute, Hour, Day, Week, Month, Calendar Year, Decade, Century
   - Volume: US Liquid Gallon, US Liquid Quart, US Liquid Pint, US Legal Cup, US Fluid Ounce, US Tablespoon, US Teaspoon, Liter, Milliliter
 
 ## Screenshots
 
-![unit-converter](https://github.com/LuisCabantac/unit-converter/assets/151472373/45506608-5d1c-49b3-9ed0-8e96ca4ea00b)
+![unit-converter](https://github.com/LuisCabantac/unit-converter/assets/151472373/1f8124b4-7aa0-426e-b63c-e8baeb050cd7)
