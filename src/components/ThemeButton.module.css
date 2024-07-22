@@ -1,0 +1,25 @@
+.btn {
+  position: absolute;
+  z-index: 1;
+  top: 1em;
+  right: 1em;
+  border: none;
+  background-color: #c5c5c5;
+  color: #172244;
+  cursor: pointer;
+}
+
+.btn:focus {
+  outline: none;
+}
+
+.btnDark {
+  color: #c5c5c5;
+  background-color: #000;
+}
+
+@media (max-width: 800px) {
+  .btn {
+    background-color: #fcfcfc;
+  }
+}
