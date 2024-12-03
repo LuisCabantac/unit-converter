@@ -1,6 +1,8 @@
 # Unit Converter
 
-Convert different units on the fly.
+A unit converter with 50+ conversions across 10 unit categories.
+
+![prismify-render-1733203796918](https://github.com/user-attachments/assets/2e616c0a-9a74-43dd-b5a5-37673688a04d)
 
 ## Features
 
@@ -16,7 +18,3 @@ Convert different units on the fly.
   - Temperature: Celsius, Fahrenheit, Kelvin, Rankine
   - Time: Nanosecond, Microsecond, Millisecond, Second, Minute, Hour, Day, Week, Month, Calendar Year, Decade, Century
   - Volume: US Liquid Gallon, US Liquid Quart, US Liquid Pint, US Legal Cup, US Fluid Ounce, US Tablespoon, US Teaspoon, Liter, Milliliter
-
-## Screenshots
-
-![unit-converter](https://github.com/LuisCabantac/unit-converter/assets/151472373/1f8124b4-7aa0-426e-b63c-e8baeb050cd7)
