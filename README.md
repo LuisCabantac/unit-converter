@@ -18,3 +18,9 @@ A unit converter with 50+ conversions across 10 unit categories.
   - Temperature: Celsius, Fahrenheit, Kelvin, Rankine
   - Time: Nanosecond, Microsecond, Millisecond, Second, Minute, Hour, Day, Week, Month, Calendar Year, Decade, Century
   - Volume: US Liquid Gallon, US Liquid Quart, US Liquid Pint, US Legal Cup, US Fluid Ounce, US Tablespoon, US Teaspoon, Liter, Milliliter
+
+## Mobile Version
+
+A React Native/Expo port of this unit converter is available at [rnative-unit_converter](https://github.com/LuisCabantac/rnative-unit_converter).
+
+This mobile version brings all the conversion capabilities of the web application to iOS and Android devices, offering the same comprehensive unit conversion functionality in a native mobile experience.
